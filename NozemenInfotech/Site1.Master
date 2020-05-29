@@ -1,0 +1,343 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="NozemenInfotech.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Nozemen Infotech</title>
+
+    <!-- Favicon -->
+   <!-- <link rel="icon" href="img/core-img/favicon.ico">-->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+   <style>
+       div.logo{
+           margin-left:60px;
+           margin-top:50px;
+           padding-left: 0px;
+           width: 200px;
+           height: 120px;
+       }
+       div.empty_section2 {
+           margin-left:0;
+           margin-top:10px;
+           padding-left: 0px;
+           width: 1400px;
+           height: 100px;
+           box-sizing: border-box;
+           background-color:gray;
+       }
+       div.empty_section{
+           margin:0px;
+     width:1800px;
+    height:30px;
+    background-color:dimgrey;
+       }
+  div.css-section { 
+      /*margin-top:50px;*/
+    /*border:1px solid red;*/ 
+     padding-top: 20px;
+     width:100%;
+    height:400px;
+    float:left;
+    }
+  div.css-section p { 
+    color:black;
+    text-align:center;
+    white-space:pre;
+     font-size: 18px;
+    font-size-adjust: 0.58;
+    font-stretch: ultra-expanded;
+        /*font-variant: small-caps;*/
+    font-family: Georgia, Garamond, serif;
+    padding: 20px;
+    }
+   div.css-section h1 { 
+           text-align:center;
+           border-bottom-width:10px;
+           border-bottom-style:groove;
+           white-space:pre;
+            /*text-decoration: underline;*/
+       padding: 10px;color:green; 
+    }
+   div.css-section2 { 
+      /*margin-top:50px;*/
+    border:1px solid red; 
+     padding-top: 15px;
+     font-size: 18px;
+    font-size-adjust: 0.58;
+    font-stretch: ultra-expanded;
+     width:40%;
+    height:400px;
+    float:left;
+    }
+  div.css-section2 p { 
+    color:black;
+    font-family: Georgia, Garamond, serif;
+    padding: 20px;
+    }
+   div.css-section2 h1 { 
+       padding: 10px;color:green; 
+    }
+
+</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+            <!-- Preloader -->
+   <%-- <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>--%>
+
+    <!-- ##### Header Area Start ##### -->
+    
+
+    <header class="header-area">
+        <!-- Navbar Area -->
+          <div class="empty_section2">
+
+        <div class="pixel-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+               <nav class="classy-navbar justify-content-between" id="pixelNav">
+
+                <div class="container-fluid">
+                    <!-- Menu -->
+
+                        <!-- Nav brand -->
+                    <div class="logo">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/NOZEME_LOGOS.jpg2.jpg" />
+                        </div>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="portfolio.html">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="services.html">Services</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="index.html">Home</a></li>
+                                                    <li><a href="about.html">About Us</a></li>
+                                                    <li><a href="services.html">Services</a></li>
+                                                    <li><a href="portfolio.html">Portfolio</a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="index.html">Home</a></li>
+                                                            <li><a href="about.html">About Us</a></li>
+                                                            <li><a href="services.html">Services</a></li>
+                                                            <li><a href="portfolio.html">Portfolio</a></li>
+                                                            <li><a href="contact.html">Contact</a></li>
+                                                            <li><a href="elements.html">Elements</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="contact.html">Contact</a></li>
+                                                    <li><a href="elements.html">Elements</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="portfolio.html">Portfolio</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Mega</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="portfolio.html">Portfolio</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="portfolio.html">Portfolio</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="portfolio.html">Portfolio</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="portfolio.html">Portfolio</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <!-- Top Social Info -->
+                                <div class="top-social-info ml-5">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                   <%-- <a href="#"><i class="fa fa-dribbble"></i></a>
+                                    <a href="#"><i class="fa fa-flickr"></i></a>--%>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <%--<a href="#"><i class="fa fa-pinterest"></i></a>--%>
+                                </div>
+                            </div>
+                            <%--<div style="clear: both;"></div>--%>
+                            </div>
+                            <%--<div class="empty_section"></div>--%>
+                            <!-- Nav End -->
+                        </div>
+                   </header>
+
+                   <!-- Search -->
+<form class="form-inline" role="search">
+<input type="text" class="form-control">
+<button type="submit" class="btn btn-secondary">Search</button>
+</form>
+
+                    </nav>
+                </div>
+            </div>
+              </div>
+
+        <%--<div style="clear: both;"></div>--%>
+
+    <!-- ##### Header Area End ##### -->
+    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+<%--        </div>--%>
+        <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area section-padding-100-0">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-footer-widget mb-100">
+                        <!-- Footer Logo -->
+                         <asp:Image ID="Image2" runat="server" ImageUrl="~/NOZEME_LOGOS.jpg2.jpg" />
+
+                   </div>
+                </div>
+
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-md-9 col-lg-8 col-xl-7">
+                    <div class="row">
+                        <!-- Single Footer Widget -->
+                        <div class="col-sm-4">
+                            <div class="single-footer-widget mb-100">
+                                <h5 class="widget-title">Address</h5>
+                                <p>90 Forestry Road,<br> Benin City, Edo State, Nigeria.</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Footer Widget -->
+                        <div class="col-sm-4">
+                            <div class="single-footer-widget mb-100">
+                                <h5 class="widget-title">Support</h5>
+                                <p><i class="fa fa-phone"></i> <br> +2348078987313</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Footer Widget -->
+                        <div class="col-sm-4">
+                            <div class="single-footer-widget mb-100">
+                                <h5 class="widget-title">Social</h5>
+                                <div class="footer-social-info">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <!--<a href="#"><i class="fa fa-dribbble"></i></a>
+                                    <a href="#"><i class="fa fa-flickr"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copywrite Area -->
+        <div class="copywrite-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-content">
+                            <!-- Copywrite Text -->
+                            <p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Nozemen Infotech
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    </form>
+     <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+</html>
